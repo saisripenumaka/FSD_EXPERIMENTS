@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of CSS</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        h2 {
+            color: darkblue;
+        }
+        p {
+            font-size: 16px;
+            color: green;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 style="color: red;">Inline CSS Example</h1>
+    <p>This paragraph uses <span style="font-weight:bold; color:purple;">inline CSS</span> for styling.</p>
+
+    <h2>Internal CSS Example</h2>
+    <p>This paragraph is styled using internal CSS defined in the &lt;style&gt; tag.</p>
+
+    <h2>External CSS Example</h2>
+    <p class="external">This paragraph is styled using external CSS (styles.css file).</p>
+</body>
+</html>

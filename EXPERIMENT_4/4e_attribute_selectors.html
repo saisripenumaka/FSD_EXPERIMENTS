@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attribute Selectors Example</title>
+    <style>
+        /* Select all input elements with type="text" */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+
+        /* Select all input elements with type starting with "p" */
+        input[type^="p"] {
+            background-color: #f0f8ff;
+        }
+
+        /* Select all input elements with type ending with "e" */
+        input[type$="e"] {
+            color: green;
+        }
+
+        /* Select all input elements with type containing "a" */
+        input[type*="a"] {
+            font-weight: bold;
+        }
+
+        /* Select links with title attribute */
+        a[title] {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Select links with title exactly "Google" */
+        a[title="Google"] {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Attribute Selector Example</h2>
+
+    <input type="text" placeholder="Text input">
+    <input type="password" placeholder="Password input">
+    <input type="checkbox" checked>
+    <input type="radio">
+
+    <br><br>
+
+    <a href="https://www.google.com" title="Google">Google</a>
+    <a href="https://www.wikipedia.org" title="Wiki">Wikipedia</a>
+    <a href="https://www.example.com">Example</a>
+</body>
+</html>

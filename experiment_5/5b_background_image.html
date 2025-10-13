@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Background Image Fixed Example</title>
+<style>
+body {
+  height: 1500px; /* to enable scrolling */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg');
+  background-repeat: repeat-x;         /* repeat horizontally */
+  background-position: center 60%;     /* halfway (60%) down the page */
+  background-attachment: fixed;        /* stays fixed while scrolling */
+  background-size: auto 400px;         /* control image height */
+}
+h1 {
+  text-align: center;
+  color: white;
+  padding-top: 200px;
+  text-shadow: 2px 2px 4px black;
+}
+</style>
+</head>
+<body>
+<h1>Fixed Background Example</h1>
+<p style="text-align:center;">Scroll down to see the background remain fixed.</p>
+</body>
+</html>

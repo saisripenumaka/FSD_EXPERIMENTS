@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Input Methods</title>
+<script>
+function takeInput() {
+  // 1. Using prompt()
+  let name = prompt("Enter your name:");
+  
+  // 2. Using HTML form input
+  let age = document.getElementById("age").value;
+  
+  // Display inputs
+  document.getElementById("result").innerHTML =
+    "Hello " + name + "! You are " + age + " years old.";
+}
+</script>
+</head>
+<body>
+<h2>JavaScript Input Methods</h2>
+<p>Enter your age: <input type="number" id="age"></p>
+<button onclick="takeInput()">Submit</button>
+<p id="result"></p>
+</body>
+</html>

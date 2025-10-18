@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>8d - Loops on Object and Array</title>
+</head>
+<body>
+  <h2>Print Data in Object and Array</h2>
+  <button onclick="printData()">Print Data</button>
+  <pre id="output"></pre>
+
+  <script>
+    function printData() {
+      const obj = {name: "John", age: 30, city: "New York"};
+      const arr = ["Red", "Green", "Blue"];
+
+      let output = "";
+
+      // for-in loop on object
+      output += "For-in loop on object:\n";
+      for (let key in obj) {
+        output += key + ": " + obj[key] + "\n";
+      }
+
+      // forEach loop on array
+      output += "\nforEach loop on array:\n";
+      arr.forEach(color => {
+        output += color + "\n";
+      });
+
+      // for-of loop on array
+      output += "\nfor-of loop on array:\n";
+      for (let color of arr) {
+        output += color + "\n";
+      }
+
+      document.getElementById("output").innerText = output;
+    }
+  </script>
+</body>
+</html>

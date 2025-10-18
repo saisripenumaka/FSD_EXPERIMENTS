@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>8e - Armstrong Number</title>
+</head>
+<body>
+  <h2>Check Armstrong Number</h2>
+  <input type="number" id="number" placeholder="Enter a number">
+  <button onclick="checkArmstrong()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkArmstrong() {
+      let num = document.getElementById("number").value;
+      if(num === "") {
+        alert("Please enter a number");
+        return;
+      }
+      let n = parseInt(num);
+      let sum = 0;
+      let temp = n;
+      let digits = n.toString().length;
+
+      while(temp > 0) {
+        let digit = temp % 10;
+        sum += Math.pow(digit, digits);
+        temp = Math.floor(temp / 10);
+      }
+
+      if(sum === n) {
+        document.getElementById("result").innerText = `${n} is an Armstrong Number.`;
+      } else {
+        document.getElementById("result").innerText = `${n} is NOT an Armstrong Number.`;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>8f - Denomination of Amount</title>
+</head>
+<body>
+  <h2>Enter Amount to get Denominations</h2>
+  <input type="number" id="amount" placeholder="Enter amount">
+  <button onclick="getDenominations()">Get Denominations</button>
+
+  <p id="result"></p>
+
+  <script>
+    function getDenominations() {
+      let amt = parseInt(document.getElementById("amount").value);
+      if(isNaN(amt) || amt < 0) {
+        alert("Please enter a valid amount");
+        return;
+      }
+
+      const notes = [100, 50, 20, 10, 5, 2, 1];
+      let result = [];
+
+      for(let note of notes) {
+        let count = Math.floor(amt / note);
+        if(count > 0) {
+          result.push(`${count} - ${note}'s`);
+          amt = amt % note;
+        }
+      }
+
+      document.getElementById("result").innerText = result.join(", ");
+    }
+  </script>
+</body>
+</html>

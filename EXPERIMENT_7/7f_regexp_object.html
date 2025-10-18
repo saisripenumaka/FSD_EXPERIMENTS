@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7f - RegExp Object</title>
+</head>
+<body>
+  <button onclick="runRegexDemo()">Run Regex Demo</button>
+
+  <script>
+    function runRegexDemo() {
+      let str = "My email is example@test.com";
+      let regex = /\w+@\w+\.\w+/;
+
+      console.log("Regex test:", regex.test(str));
+      console.log("Match found:", str.match(regex));
+
+      let result = regex.exec(str);
+      if (result) {
+        console.log("Exec matched:", result[0]);
+      } else {
+        console.log("No match found");
+      }
+    }
+  </script>
+</body>
+</html>

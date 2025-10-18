@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7h - User Defined Object</title>
+</head>
+<body>
+  <button onclick="runUserDefinedDemo()">Run User Defined Object Demo</button>
+
+  <script>
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+
+      this.display = function() {
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+      };
+
+      Object.defineProperty(this, 'info', {
+        get: function() {
+          return `${this.name} is ${this.age} years old.`;
+        }
+      });
+
+      Object.defineProperty(this, 'updateAge', {
+        set: function(newAge) {
+          if(newAge > 0) {
+            this.age = newAge;
+          } else {
+            console.log("Invalid age");
+          }
+        }
+      });
+    }
+
+    function runUserDefinedDemo() {
+      let person1 = new Person("Alice", 28);
+      person1.display();
+      console.log(person1.info);
+
+      person1.updateAge = 30;
+      person1.display();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7g - Date Object</title>
+</head>
+<body>
+  <button onclick="runDateDemo()">Run Date Demo</button>
+
+  <script>
+    function runDateDemo() {
+      let now = new Date();
+
+      console.log("Current date and time:", now.toString());
+      console.log("Year:", now.getFullYear());
+      console.log("Month (0-11):", now.getMonth());
+      console.log("Date:", now.getDate());
+      console.log("Hours:", now.getHours());
+      console.log("Minutes:", now.getMinutes());
+      console.log("Seconds:", now.getSeconds());
+    }
+  </script>
+</body>
+</html>

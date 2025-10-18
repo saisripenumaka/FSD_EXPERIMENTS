@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>7c - Array Object</title>
+</head>
+<body>
+  <button onclick="runArrayDemo()">Run Array Demo</button>
+
+  <script>
+    function runArrayDemo() {
+      let fruits = ["Apple", "Banana", "Mango"];
+      console.log("Original Array:", fruits);
+
+      fruits.push("Orange");
+      console.log("After push:", fruits);
+
+      let removed = fruits.shift();
+      console.log("Removed element:", removed);
+      console.log("After shift:", fruits);
+
+      console.log("Array length:", fruits.length);
+
+      console.log("Sorted array:", fruits.sort());
+
+      console.log("Index of Mango:", fruits.indexOf("Mango"));
+    }
+  </script>
+</body>
+</html>

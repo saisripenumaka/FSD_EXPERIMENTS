@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+</head>
+<body>
+    <h2>Array Object Demo</h2>
+    <button onclick="showArrayOperations()">Run Array Operations</button>
+
+    <script>
+        function showArrayOperations() {
+            let numbers = [10, 5, 3, 12, 8];
+
+            // Display original array
+            console.log("Original Array:", numbers);
+
+            // Add element to the beginning
+            numbers.unshift(1);
+            console.log("After unshift(1):", numbers);
+
+            // Remove the last element
+            let removed = numbers.pop();
+            console.log("After pop():", numbers);
+            console.log("Removed Element:", removed);
+
+            // Find the index of an element
+            let index = numbers.indexOf(5);
+            console.log("Index of 5:", index);
+
+            // Filter even numbers
+            let evens = numbers.filter(num => num % 2 === 0);
+            console.log("Even Numbers:", evens);
+
+            // Reduce: Sum of all numbers
+            let sum = numbers.reduce((total, current) => total + current, 0);
+            console.log("Sum of Numbers:", sum);
+        }
+    </script>
+</body>
+</html>

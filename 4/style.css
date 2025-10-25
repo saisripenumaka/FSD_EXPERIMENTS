@@ -1,0 +1,65 @@
+/* 1. Simple selectors */
+/* Element selector */
+p {
+    color: blue;
+}
+
+/* ID selector */
+#main-heading {
+    text-align: center;
+    color: darkred;
+}
+
+/* Class selector */
+.intro {
+    font-weight: bold;
+}
+
+/* Group selector */
+h1, p {
+    font-family: Arial, sans-serif;
+}
+
+/* Universal selector */
+* {
+    margin: 5px;
+}
+
+/* 2. Combinator selectors */
+/* Descendant selector */
+div p {
+    background-color: #f0f0f0;
+}
+
+/* Child selector */
+div > p {
+    border: 1px solid gray;
+}
+
+/* Adjacent sibling selector */
+p.intro + p {
+    font-style: italic;
+}
+
+/* General sibling selector */
+p.intro ~ p {
+    color: green;
+}
+
+/* 3. Pseudo-class selector */
+/* Change link color on hover */
+a:hover {
+    color: orange;
+}
+
+/* 4. Pseudo-element selector */
+/* Add text before each list item */
+li::before {
+    content: "👉 ";
+}
+
+/* 5. Attribute selector */
+/* Style links that open in new tab */
+a[target="_blank"] {
+    color: purple;
+}
